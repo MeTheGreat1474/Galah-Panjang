@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Learn Galah Panjang</title>
+    <link rel="icon" href="UM1.png" type="image/x-icon">
+    <link rel="stylesheet" href="galah.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Icon Library-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>-->
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+
+
+  </head>
+
+    <body>
+        <!--
+        <section id="header" >
+                    
+        <nav>
+        <a href="landingpage.html"><img src="header3.jpg" class="logo"></a>
+        <ul class="nav-links">
+            <a href="../landing page/landingpage.html" class="active"><i class="fa fa-home"></i> Home</a>
+            <a href="../KK page/collegeselection.html"><i class="fa fa-shopping-cart"></i> Order Now! </a>
+            <a href="../report page/reportpage.html"><i class="fa fa-exclamation-circle"></i> Report</a>
+            <button class="active" onclick="document.location='../user login/userlogin.html'"><i class="fa fa-user-circle"></i> Sign Out</button>
+        </ul>
+        </nav>
+        </section> -->
+        
+
+        <section id="hero">
+            
+            <div class="title">
+                <h2>Learn more today about</h2>
+                <h1>Galah Panjang</h1>
+                <p>a traditional malaysian game</p>
+            </div>
+            
+            <a href="#what"><button class="learnmore" onclick="playAudio()"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Learn more </button></a>
+        </section>
+
+        <div class="what" id="what">
+            <h2>What is <span style="color: #088178">Galah Panjang</span> ?</h2>
+            <!--
+            <p>
+                <span style="color: #088178">Galah Panjang</span> is a Malaysian traditional game which is played at an open space or court. 
+                This simple game does not require any equipment other than something to mark a line on the ground and can have up to 10 players per game.<br>
+                <span style="color: #088178">Galah Panjang</span> is mainly famous among the younger generation and serves as a simple game to have fun with their friends.
+            </p>
+            -->
+
+            <div class="cardstyle"> 
+                <div class="column">
+                <div> <!--Card1 1-->
+                    <div class="content">
+                        <img src="CGfHCHSUAAAY-RF2.png" alt="card1">
+                        <p>A Malaysian traditional game which is played at an open space or court.</p>
+                        <!--<a href="C:\Users\asus\OneDrive - Universiti Malaya\PROJECT CODING HTML\PCAM\shop.html"><p><button class="card">Select</button></p></a>-->
+                    </div>
+                </div>
+                </div>
+        
+                <div class="column">
+                <div> <!--Card 2-->
+                    <!--<div class="overlay">Overlay effect
+                        <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                    </div> -->
+                    <div class="content">
+                        <img src="IMG_0002.jpg" alt="card2">
+                        <p>Doesn't require any equipment other than something to mark a line on the ground and can have up to 10 players per game.</p>
+                        <!--<a href="#"><p><button class="card">Select</button></p></a>-->
+                    </div>
+                </div>
+                </div> 
+                
+                <div class="column">
+                <div> <!--Card 3-->
+                    <!--<div class="overlay"> Overlay effect
+                        <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                    </div> -->
+                    <div class="content">
+                        <img src="Puisi-Galah-Panjang.jpg" alt="card3">
+                        <p>Is mainly famous among the younger generation and serves as a simple game to have fun with their friends.</p>
+                        <!--<a href="#"><p><button class="card">Select</button></p></a>-->
+                    </div>
+                </div>
+                </div>
+            </div>
+                
+
+            <h2>How to play <span style="color: #088178">Galah Panjang</span> ?</h2>
+            <div class="powerpoint">
+                <!--embed powerpoint here-->
+                <iframe src="https://365umedumy-my.sharepoint.com/personal/22002163_siswa365_um_edu_my/_layouts/15/Doc.aspx?sourcedoc={f61d7b2d-6315-4a57-8b2e-4d979de4dcc6}&amp;action=embedview&amp;wdAr=1.7777777777777777" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>            </div>
+            
+
+            <h2>Try Yourself!</h2>
+            <div class="game">
+                <!--put game canvas here-->
+                <iframe src="https://itch.io/embed-upload/9388789?color=fbfbfc" allowfullscreen="" width="1000" height="583"></iframe>            
+            </div>
+
+            <audio id="myAudio" controls autoplay loop preload="auto">
+                <source src="Sunshine Serenade - Tim Haywood.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+              
+            <!-- Volume control -->
+            
+              
+            
+        </div>
+
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetID = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetID);
+
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior:"smooth" // Smooth scrolling effect
+                        });
+                    }
+                });
+            });
+
+            const audio = document.getElementById("myAudio");
+            const volumeControl = document.getElementById("volumeControl");
+
+            // Set initial volume
+            audio.volume = 0.02; // Adjust this value as needed
+            volumeControl.value = 0.02; // Set the initial volume slider position
+
+
+            // Function to toggle mute/unmute
+            function toggleMute() {
+                if (audio.volume !== 0) {
+                    audio.volume = 0;
+                    volumeControl.value = 0;
+                } else {
+                    audio.volume = 1;
+                    volumeControl.value = 1;
+                }
+            }
+
+            // Update volume based on slider
+            volumeControl.addEventListener("input", function() {
+            audio.volume = this.value;
+            });
+
+            function playAudio() {
+            const audio = document.getElementById("myAudio");
+            audio.play();
+            }
+
+
+        </script>
+
+    </body>
+</html>
